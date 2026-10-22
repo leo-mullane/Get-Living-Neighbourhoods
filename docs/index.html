@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Elephant Central conversion mockup · Get Living</title>
+  <link rel="stylesheet" href="./css/mockup.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <!-- Mockup control bar (R01). Not part of the Get Living page: it switches
+       between today's page and the proposed changes, and turns notes on. -->
+  <div class="mk-bar">
+    <div class="container">
+      <a class="mk-brand" href="./index.html">getliving <span>Elephant Central conversion mockup</span></a>
+      <nav class="mk-nav" aria-label="Mockup pages">
+        <a href="./index.html" data-mk-page="overview">Overview</a>
+        <a href="./pages/elephant-central.html" data-mk-page="mockup">Mockup</a>
+      </nav>
+      <span class="mk-spacer"></span>
+      <div class="mk-seg" role="group" aria-label="Page version" data-mockup-only>
+        <button type="button" data-mode="today" aria-pressed="false">Today</button>
+        <button type="button" data-mode="proposed" aria-pressed="true">Proposed</button>
+      </div>
+      <span class="mk-status" data-status data-mockup-only aria-live="polite"></span>
+      <button type="button" class="mk-btn" data-drawer-open aria-expanded="false" aria-controls="tweak-drawer" data-mockup-only>Changes</button>
+      <button type="button" class="notes-toggle" role="switch" aria-checked="false" data-notes-toggle data-mockup-only>
+        <span class="notes-track" aria-hidden="true"><span class="notes-thumb"></span></span>
+        <span class="notes-label">Notes off</span>
+      </button>
+    </div>
+  </div>
+
+
+  <main id="main">
+    <!-- Overview (R00) -->
+    <section class="ov-hero" aria-labelledby="ov-h">
+      <div class="container">
+        <p class="kicker">Prepared by ClerksWell for Get Living</p>
+        <h1 id="ov-h" class="display">Elephant Central: twelve changes to test</h1>
+        <p class="lead">Get Living would like to improve conversion on the Elephant Central neighbourhood page and plans to A/B test whatever changes it makes. This mockup shows twelve changes to the page's layout, wording and calls to action. All of them use components the page already has. None of them is a new feature.</p>
+        <div class="btns">
+          <a class="btn btn-solid" href="./pages/elephant-central.html?t=all">Open the proposed page</a>
+          <a class="btn" href="./pages/elephant-central.html?t=none">See the page as it is today</a>
+        </div>
+        <div class="ov-meta">
+          <span>Version 1</span><span>22 October 2026</span><span>For discussion</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="ov" aria-labelledby="how-h">
+      <div class="container cols">
+        <div>
+          <h2 id="how-h">How to use the mockup</h2>
+          <p>The mockup is a working copy of the Elephant Central page, rebuilt closely enough to recognise, with Get Living's global header and footer left out. The bar at the top switches between <strong>Today</strong> and <strong>Proposed</strong>, and the <strong>Changes</strong> button opens a panel where each change can be turned on or off, so any combination can be seen before it is built.</p>
+          <p>Switching <strong>Notes</strong> on adds a note beside each change explaining what it is, why it should help conversion, what to measure and how much effort it is likely to be. Changed elements are outlined and numbered while notes are on. Two notes in red are open questions for Get Living.</p>
+          <p>Prices and availability are as shown on Find a home on 22 October 2026. The HomeViews rating is Get Living's portfolio-wide score as of September 2026. Photography is Get Living's own, loaded from getliving.com; anywhere it cannot load, a coloured placeholder shows instead.</p>
+        </div>
+        <div class="panel">
+          <h3>A note on effort</h3>
+          <p>We cannot see how the page is built, so we do not know for certain which changes are a CMS edit and which need a developer. Each change is labelled with our best guess:</p>
+          <ul class="effort-key">
+            <li><span class="chip chip-cms">CMS edit</span><span>Very likely a content change in WordPress, with no development. (2)</span></li>
+            <li><span class="chip chip-hubspot">HubSpot setting</span><span>A form setting in HubSpot, with no development. (1)</span></li>
+            <li><span class="chip chip-check">Check with developers</span><span>A CMS edit if the component already supports it, otherwise a small template change. (8)</span></li>
+            <li><span class="chip chip-dev">Small front-end change</span><span>Needs a developer, but no new feature. (1)</span></li>
+          </ul>
+          <p class="after-key">Get Living's developers will know the answer for most of the "check" items straight away, and a short run through the list with them would firm these up before anything is scheduled.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="ov ov-dark" aria-labelledby="test-h">
+      <div class="container cols">
+        <div>
+          <h2 id="test-h">How we would test them</h2>
+          <p>We have grouped the changes into three rounds rather than proposing twelve separate tests. A single neighbourhood page is unlikely to get enough traffic to test small changes one at a time and reach a clear result in a sensible time, and several of the changes depend on each other: moving the homes up the page matters more once the cards show prices. Testing in rounds reaches a result sooner.</p>
+          <p>The trade-off is that a winning round does not tell you which of its changes did the work. If traffic allows, the larger changes in a winning round can be tested on their own afterwards. Get Living's analytics will say how much traffic the page gets, and so how long each round would need to run.</p>
+        </div>
+        <div class="panel">
+          <h3>Agree the measure first</h3>
+          <ul>
+            <li>Primary: enquiry form submissions from this page.</li>
+            <li>Secondary: click-through to the Elephant Central listings, since a renter who finds a home there may enquire from the listing instead.</li>
+            <li>Alongside: enquiry quality, as judged by the lettings team. Showing prices may reduce the number of enquiries while improving them, and it is worth deciding in advance whether that counts as a win.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="ov" aria-labelledby="list-h">
+      <div class="container">
+        <h2 id="list-h">The twelve changes</h2>
+        <p>Each link opens the mockup with that change, or that round, switched on by itself.</p>
+        <div data-tweak-list data-page="pages/elephant-central.html"></div>
+      </div>
+    </section>
+
+    <section class="ov" aria-labelledby="out-h">
+      <div class="container cols">
+        <div>
+          <h2 id="out-h">What we have left out</h2>
+          <p>The map view, saved homes, viewing booking and the new neighbourhood template from our earlier prototypes are new features, so they are not part of this. They remain in the earlier prototype pack should the scope change. The changes here are compatible with them, and several (prices on the cards, journey times, a residents' rating) are smaller versions of the same ideas.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="ec-end"><div class="container">Prepared by ClerksWell · Mockup for discussion · Photography © Get Living</div></footer>
+
+  <script src="./js/tweaks.js"></script>
+  <script src="./js/mockup.js"></script>
+</body>
+</html>

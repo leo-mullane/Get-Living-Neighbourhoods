@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Elephant Central mockup · Get Living</title>
+  <link rel="stylesheet" href="../css/mockup.css">
+</head>
+<body data-mockup>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <!-- Mockup control bar (R01). Not part of the Get Living page: it switches
+       between today's page and the proposed changes, and turns notes on. -->
+  <div class="mk-bar">
+    <div class="container">
+      <a class="mk-brand" href="../index.html">getliving <span>Elephant Central conversion mockup</span></a>
+      <nav class="mk-nav" aria-label="Mockup pages">
+        <a href="../index.html" data-mk-page="overview">Overview</a>
+        <a href="../pages/elephant-central.html" data-mk-page="mockup">Mockup</a>
+      </nav>
+      <span class="mk-spacer"></span>
+      <div class="mk-seg" role="group" aria-label="Page version" data-mockup-only>
+        <button type="button" data-mode="today" aria-pressed="false">Today</button>
+        <button type="button" data-mode="proposed" aria-pressed="true">Proposed</button>
+      </div>
+      <span class="mk-status" data-status data-mockup-only aria-live="polite"></span>
+      <button type="button" class="mk-btn" data-drawer-open aria-expanded="false" aria-controls="tweak-drawer" data-mockup-only>Changes</button>
+      <button type="button" class="notes-toggle" role="switch" aria-checked="false" data-notes-toggle data-mockup-only>
+        <span class="notes-track" aria-hidden="true"><span class="notes-thumb"></span></span>
+        <span class="notes-label">Notes off</span>
+      </button>
+    </div>
+  </div>
+
+
+  <!-- Tweak panel (R02) -->
+  <div class="mk-scrim" data-scrim data-drawer-close hidden></div>
+  <div class="mk-drawer" id="tweak-drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title" data-drawer hidden>
+    <header>
+      <h2 id="drawer-title">The 12 changes</h2>
+      <button type="button" class="close" aria-label="Close" data-drawer-close>&times;</button>
+    </header>
+    <div class="body" data-drawer-body>
+      <p>Turn changes on and off to see them alone or in any combination. Each one uses a component the page already has.</p>
+    </div>
+  </div>
+
+  <!-- Elephant Central sticky bar (T10). Get Living's global header is left out. -->
+  <div class="ec-sub" id="subnav">
+    <div class="container">
+      <a class="ec-logo" href="#hero" aria-label="Elephant Central, top of page">Elephant<span>Central</span></a>
+      <nav aria-label="On this page" data-hide="subnav">
+        <a href="#intro">Your neighbourhood</a>
+        <a href="#transport">Location</a>
+        <a href="#community">Amenities</a>
+        <a href="#apartments">Apartments</a>
+      </nav>
+      <nav aria-label="On this page" data-show="subnav" hidden>
+        <a href="#apartments">Homes and prices</a>
+        <a href="#intro">Amenities</a>
+        <a href="#transport">Location</a>
+        <a href="#community">Community</a>
+      </nav>
+      <div class="cta">
+        <a class="btn btn-sm btn-solid" href="https://www.getliving.com/find-a-home/?neighbourhood=elephant-central" data-show="subnav" data-mark="10" hidden>View homes</a>
+        <a class="btn btn-sm" href="#enquire">Enquire now</a>
+      </div>
+    </div>
+  </div>
+
+  <main id="main" class="ec-main">
+
+    <!-- ===== Hero (T1, T2) ===== -->
+    <div class="ec-sec" id="hero">
+      <div class="note-slot" data-note="10 1 2"></div>
+      <section class="ec-hero" aria-labelledby="h1">
+        <div class="ph" role="img" aria-label="Planting and apartment buildings at Castle Square, Elephant Central" data-label="Photo · Castle Square" data-img="https://www.getliving.com/wp-content/uploads/2025/06/elephant-central-castle-square-greenery-1920x1280-1.jpeg"></div>
+        <div class="wash" aria-hidden="true"></div>
+        <div class="container">
+          <div class="copy">
+            <h1 id="h1" class="display">Rent a home at Elephant Central</h1>
+            <p class="sub">Apartments to rent in Elephant and Castle, a zone 1 location with it all</p>
+            <ul class="facts" data-show="hero-facts" data-mark="2" hidden>
+              <li><span class="price">1 and 2 bed homes from £2,550 pcm</span></li>
+              <li><span class="avail">8 homes available now</span></li>
+              <li>Furnished</li>
+              <li>Wi-Fi included</li>
+              <li>Pet friendly</li>
+            </ul>
+            <div class="ctas" data-show="hero-cta" data-mark="1" hidden>
+              <a class="btn btn-solid" href="https://www.getliving.com/find-a-home/?neighbourhood=elephant-central">See available homes</a>
+              <a class="btn" href="#enquire">Enquire now</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ===== Intro and amenities (T5) ===== -->
+    <div class="ec-sec" id="intro">
+      <div class="note-slot" data-note="5"></div>
+      <section class="ec-intro" aria-labelledby="intro-h">
+        <div class="container grid">
+          <div>
+            <h2 id="intro-h">A central London neighbourhood</h2>
+            <p>Elephant Central puts you front and centre of the best that London has to offer. Rent a home in Elephant and Castle, TfL Zone 1, close to great transport links from Elephant and Castle stations into the city while living by green spaces and a vibrant mix of bars, restaurants and cultural hotspots.</p>
+          </div>
+          <div>
+            <!-- Today: all 14, in the live order -->
+            <ul class="amen" data-hide="amenities">
+              <li><span class="ico" data-icon="https://www.getliving.com/wp-content/uploads/2023/05/Locations.svg"></span>Zone 1 Location</li>
+              <li><span class="ico" data-icon="https://www.getliving.com/wp-content/uploads/2023/07/wifi_black_icon.svg"></span>Wi-Fi Included</li>
+              <li><span class="ico" data-icon="https://www.getliving.com/wp-content/uploads/2023/05/Concierge.svg"></span>Concierge</li>
+              <li><span class="ico" data-icon="https://www.getliving.com/wp-content/uploads/2023/05/Transport-links.svg"></span>Great Transport Links</li>
+              <li><span class="ico" data-icon="https://www.getliving.com/wp-content/uploads/2023/05/On-Site-Maintenance.svg"></span>On-site Maintenance</li>
+              <li><span class="ico" data-icon="https://www.getliving.com/wp-content/uploads/2023/05/24HR-Security.svg"></span>24 Hour On-Site Security</li>
+              <li><span class="ico" data-icon="https://www.getliving.com/wp-content/uploads/2023/05/Pet-Friendly.svg"></span>Pet Friendly</li>
+              <li><span class="ico" data-icon="https://www.getliving.com/wp-content/uploads/2023/07/parcel_receiving_black_icon.svg"></span>Parcel Lockers</li>
+              <li><span class="ico" data-icon="https://www.getliving.com/wp-content/uploads/2023/05/Courtyard-Gardens.svg"></span>Courtyard Gardens</li>
+              <li><span class="ico" data-icon="https://www.getliving.com/wp-content/uploads/2023/05/Club-Room-_-Communal-Areas.svg"></span>Club Room Communal Areas</li>
+              <li><span class="ico" data-icon="https://www.getliving.com/wp-content/uploads/2023/05/Bars.svg"></span>Independent Bars, Shops &amp; Restaurants</li>
+              <li><span class="ico" data-icon="https://www.getliving.com/wp-content/uploads/2023/05/Events.svg"></span>Resident Events</li>
+              <li><span class="ico" data-icon="https://www.getliving.com/wp-content/uploads/2023/05/Secure-Bike-Storage.svg"></span>Secure Bike Storage</li>
+              <li><span class="ico" data-icon="https://www.getliving.com/wp-content/uploads/2023/05/Secure-Car-Parking.svg"></span>Secure Car Parking</li>
+            </ul>
+            <!-- Proposed: eight first, the rest behind Show all -->
+            <div data-show="amenities" data-mark="5" hidden>
+              <ul class="amen amen-b">
+                <li><span class="ico" data-icon="https://www.getliving.com/wp-content/uploads/2023/05/On-Site-Maintenance.svg"></span>On-site Maintenance</li>
+                <li><span class="ico" data-icon="https://www.getliving.com/wp-content/uploads/2023/05/24HR-Security.svg"></span>24 Hour On-Site Security</li>
+                <li><span class="ico" data-icon="https://www.getliving.com/wp-content/uploads/2023/07/wifi_black_icon.svg"></span>Wi-Fi Included</li>
+                <li><span class="ico" data-icon="https://www.getliving.com/wp-content/uploads/2023/05/Pet-Friendly.svg"></span>Pet Friendly</li>
+                <li><span class="ico" data-icon="https://www.getliving.com/wp-content/uploads/2023/05/Concierge.svg"></span>Concierge</li>
+                <li><span class="ico" data-icon="https://www.getliving.com/wp-content/uploads/2023/05/Secure-Car-Parking.svg"></span>Secure Car Parking</li>
+                <li><span class="ico" data-icon="https://www.getliving.com/wp-content/uploads/2023/05/Locations.svg"></span>Zone 1 Location</li>
+                <li><span class="ico" data-icon="https://www.getliving.com/wp-content/uploads/2023/05/Club-Room-_-Communal-Areas.svg"></span>Club Room Communal Areas</li>
+              </ul>
+              <ul class="amen amen-b" id="amen-extra" hidden>
+                <li><span class="ico" data-icon="https://www.getliving.com/wp-content/uploads/2023/05/Transport-links.svg"></span>Great Transport Links</li>
+                <li><span class="ico" data-icon="https://www.getliving.com/wp-content/uploads/2023/07/parcel_receiving_black_icon.svg"></span>Parcel Lockers</li>
+                <li><span class="ico" data-icon="https://www.getliving.com/wp-content/uploads/2023/05/Courtyard-Gardens.svg"></span>Courtyard Gardens</li>
+                <li><span class="ico" data-icon="https://www.getliving.com/wp-content/uploads/2023/05/Bars.svg"></span>Independent Bars, Shops &amp; Restaurants</li>
+                <li><span class="ico" data-icon="https://www.getliving.com/wp-content/uploads/2023/05/Events.svg"></span>Resident Events</li>
+                <li><span class="ico" data-icon="https://www.getliving.com/wp-content/uploads/2023/05/Secure-Bike-Storage.svg"></span>Secure Bike Storage</li>
+              </ul>
+              <div class="amen-more"><button type="button" data-amen-more aria-expanded="false" aria-controls="amen-extra">Show all 14 amenities</button></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ===== Homes with the view ===== -->
+    <div class="ec-sec" id="view">
+      <section class="ec-view" aria-labelledby="view-h">
+        <div class="container grid">
+          <div class="ph tone-gold" role="img" aria-label="The London skyline from the Elephant Central courtyard" data-label="Photo · skyline view" data-img="https://www.getliving.com/wp-content/uploads/2025/06/elephant-central-courtyard-skyline-view-1400x1396.jpeg"></div>
+          <div class="card">
+            <h2 id="view-h">Homes with the view</h2>
+            <p>Located in Zone 1, almost all of our homes at Elephant Central benefit from views of iconic London landmarks – old and new. Rain or shine, whether you're waking up to the Shard or to Big Ben, it's hard not to have your breath taken away.</p>
+            <p>Across all three buildings at Elephant Central: Mawes House, Raglan House and Tantallon House, we offer a choice of furnished 1-3 bed apartments to rent, that are already set-up with Wi-Fi and energy efficient features* helping you reduce your consumption, keeping bills and emissions low.</p>
+            <p class="fine">*99% of Elephant Central apartments are rated B on EPC</p>
+            <div class="btns">
+              <a class="btn" href="https://www.getliving.com/find-a-home/?neighbourhood=elephant-central">Find a home</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ===== Getting around (T9) ===== -->
+    <div class="ec-sec" id="transport">
+      <div class="note-slot" data-note="9"></div>
+      <section class="ec-transport" aria-labelledby="transport-h">
+        <div class="grid">
+          <div class="panel">
+            <h3 id="transport-h">Getting around South London</h3>
+            <p>Despite being renowned for its rather puzzling roundabout, Elephant and Castle is a key transport hub in South London:</p>
+            <ul data-hide="transport">
+              <li>20 minute walk to South Bank and London Bridge</li>
+              <li>Access Northern and Bakerloo lines in less than 5 minutes from your door</li>
+              <li>28 bus routes spanning the capital run through Elephant and Castle</li>
+              <li>National Rail train services from across the road</li>
+              <li>It's on the Cycle Superhighway, connecting to King's Cross</li>
+            </ul>
+            <ul class="times" data-show="transport" data-mark="9" hidden>
+              <li><strong>Under 5 min</strong><span>Northern and Bakerloo lines, from your door</span></li>
+              <li><strong>Across the road</strong><span>National Rail services</span></li>
+              <li><strong>20 min walk</strong><span>South Bank and London Bridge</span></li>
+              <li><strong>28 routes</strong><span>Buses across the capital</span></li>
+              <li><strong>By bike</strong><span>Cycle Superhighway to King's Cross</span></li>
+            </ul>
+            <p>Elephant Central is within walking distance of South Bank where you can admire modern art alongside skateboarding skills. Take a stroll east to Waterloo, or north to Borough for even more choice of restaurants and bars.</p>
+            <p data-hide="transport"><a href="#commute">Calculate your commute time</a> via train, bus, bike or walking.</p>
+            <p data-show="transport" hidden><a class="btn btn-light" href="#commute">Work out your commute</a></p>
+          </div>
+          <div class="ph tone-navy" role="img" aria-label="Buses passing Elephant Central" data-label="Photo · buses outside Elephant Central" data-img="https://www.getliving.com/wp-content/uploads/2023/08/EC-Road-Buses-1400x1400-1.jpg"></div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ===== Community carousel (T12) ===== -->
+    <div class="ec-sec" id="community">
+      <div class="note-slot" data-note="12"></div>
+      <section class="ec-community" aria-labelledby="community-h">
+        <div class="container grid">
+          <div>
+            <h3 id="community-h">Zone 1 living where connection is key</h3>
+            <p>Elephant Central brings together big-city living with a tight community feel. Our concierge and on-site team are on a hand when needed, and there's regular social events:</p>
+            <p class="sec-cta" data-show="section-ctas" data-mark="12" hidden><a class="link-arrow" href="https://www.getliving.com/find-a-home/?neighbourhood=elephant-central">See available homes</a></p>
+          </div>
+          <div data-car tabindex="0" aria-roledescription="carousel" aria-label="Life at Elephant Central">
+            <div class="car">
+              <div class="car-track">
+                <article class="car-card"><div class="ph tone-gold" data-label="Photo" data-img="https://www.getliving.com/wp-content/uploads/2023/07/EC-Pizza-Papagone-Serving-Pasta-V2-1000x500-1.jpg"></div><div class="txt"><span class="badge"><span class="ico" data-icon="https://www.getliving.com/wp-content/uploads/2023/05/Supermarket.svg"></span></span>Shops, restaurants, bars and essential services on the doorstep</div></article>
+                <article class="car-card"><div class="ph" data-label="Photo" data-img="https://www.getliving.com/wp-content/uploads/2023/08/EC-Concierge-People-1000x700-1.jpg"></div><div class="txt"><span class="badge"><span class="ico" data-icon="https://www.getliving.com/wp-content/uploads/2023/05/Concierge.svg"></span></span>Friendly on-site team and concierge</div></article>
+                <article class="car-card"><div class="ph tone-room" data-label="Photo" data-img="https://www.getliving.com/wp-content/uploads/2025/06/elephant-central-remote-working-1000x500-1.jpg"></div><div class="txt"><span class="badge"><span class="ico" data-icon="https://www.getliving.com/wp-content/uploads/2024/07/club_room_communal_areas_black_icon.svg"></span></span>Club Room with spaces for working and relaxing</div></article>
+                <article class="car-card"><div class="ph" data-label="Photo" data-img="https://www.getliving.com/wp-content/uploads/2023/07/Stock-Man-Workout-Steps-1000x500-1.jpg"></div><div class="txt"><span class="badge"><span class="ico" data-icon="https://www.getliving.com/wp-content/uploads/2023/05/Gym.svg"></span></span>Weekly fitness classes sponsored by us</div></article>
+                <article class="car-card"><div class="ph" data-label="Photo" data-img="https://www.getliving.com/wp-content/uploads/2023/08/EC-People-Courtyard-Bench-1000x700-1.jpg"></div><div class="txt"><span class="badge"><span class="ico" data-icon="https://www.getliving.com/wp-content/uploads/2023/07/courtyard_gardens_black_icon.svg"></span></span>Shared residents' courtyard</div></article>
+              </div>
+            </div>
+            <div class="car-ctrl">
+              <button type="button" data-prev aria-label="Previous">&#8592;</button>
+              <button type="button" data-next aria-label="Next">&#8594;</button>
+              <span class="prog" aria-hidden="true"><span></span></span>
+              <span class="count" aria-live="polite">1 / 5</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ===== Enquire (T6, T7, T8) ===== -->
+    <div class="ec-sec" id="enquire">
+      <div class="note-slot" data-note="6 7">
+        <aside class="cro-note query"><h4>Q: How quickly does the lettings team reply?</h4><p>Tweak 6 promises a reply within a set time. We have used "one working day" as a placeholder. It should only go live with a figure the Elephant Central team is confident of meeting, because a missed promise at this stage does more harm than no promise.</p></aside>
+      </div>
+      <section class="ec-enquire" aria-labelledby="enq-h">
+        <div class="container">
+          <div class="head">
+            <div>
+              <h2 id="enq-h" class="display">Enquire now to rent a flat in central London</h2>
+              <p>Homes available to rent in Mawes House, Raglan House and Tantallon House at Elephant Central in London.</p>
+            </div>
+            <button type="button" class="btn acc-btn" data-acc-btn data-hide="enquiry-open" aria-expanded="false" aria-controls="enquiry-form">Enquire now <span class="chev" aria-hidden="true">&#8964;</span></button>
+          </div>
+          <div class="reassure" data-show="enquiry-open" data-mark="6" hidden>
+            <div><strong>A reply within one working day</strong>From the Elephant Central team (to confirm)</div>
+            <div><strong>No obligation</strong>Ask about homes, prices or a viewing</div>
+            <div><strong>Viewings at a time that suits you</strong>We will arrange it with you directly</div>
+          </div>
+          <p class="rating" data-show="proof" data-mark="8" hidden>Residents rate Get Living 4.42 out of 5 on HomeViews, from 1,357 verified reviews.</p>
+
+          <div class="form-wrap" id="enquiry-form" hidden>
+            <form class="hs" data-hs-form novalidate>
+              <div class="field" data-required><label for="f-first">First name <span class="req">*</span></label><input type="text" id="f-first" autocomplete="given-name"></div>
+              <div class="field" data-required><label for="f-last">Last name <span class="req">*</span></label><input type="text" id="f-last" autocomplete="family-name"></div>
+              <div class="field" data-required><label for="f-email">Email address <span class="req">*</span></label><input type="email" id="f-email" autocomplete="email"></div>
+              <div class="field" data-required><label for="f-tel">Telephone <span class="req">*</span></label><input type="tel" id="f-tel" autocomplete="tel"></div>
+              <div class="field" data-required><label for="f-beds">Number of bedrooms <span class="req">*</span></label>
+                <select id="f-beds"><option value="">Please select</option><option value="1">1 bedroom</option><option value="2">2 bedrooms</option><option value="3">3 bedrooms</option></select></div>
+              <div class="field" data-required><label for="f-move">When would you like to move in? <span class="req">*</span></label>
+                <select id="f-move"><option value="">Please select</option><option>As soon as possible</option><option>Within 1 month</option><option>1 to 3 months</option><option>3 months or more</option></select></div>
+
+              <div class="group" data-show="form-fields" data-mark="7" hidden><p>Anything else that would help us? All optional.</p></div>
+
+              <fieldset class="field opt-field" data-required-today><legend>Are you currently living in the UK? <span class="req" data-hide="form-fields">*</span><span class="opt" data-show="form-fields" hidden>(optional)</span></legend>
+                <div class="radios"><label><input type="radio" name="uk"> Yes</label><label><input type="radio" name="uk"> No</label></div></fieldset>
+              <fieldset class="field opt-field" data-required-today><legend>Preferred method of contact <span class="req" data-hide="form-fields">*</span><span class="opt" data-show="form-fields" hidden>(optional)</span></legend>
+                <div class="radios"><label><input type="radio" name="contact"> Both</label><label><input type="radio" name="contact"> Email</label><label><input type="radio" name="contact"> Telephone</label></div></fieldset>
+              <fieldset class="field opt-field" data-required-today><legend>Will you be bringing any pets? <span class="req" data-hide="form-fields">*</span><span class="opt" data-show="form-fields" hidden>(optional)</span></legend>
+                <div class="radios"><label><input type="radio" name="pets"> Yes</label><label><input type="radio" name="pets"> No</label></div></fieldset>
+              <div class="field opt-field" data-required-today><label for="f-emp">What is your current employment status? <span class="req" data-hide="form-fields">*</span><span class="opt" data-show="form-fields" hidden>(optional)</span></label>
+                <select id="f-emp"><option value="">Please select</option><option>Employed</option><option>Self-employed</option><option>Student</option><option>Other</option></select></div>
+              <div class="field opt-field"><label for="f-bmin">Budget minimum <span class="opt">(optional)</span></label><input type="text" id="f-bmin" inputmode="numeric"></div>
+              <div class="field opt-field"><label for="f-bmax">Budget maximum <span class="opt">(optional)</span></label><input type="text" id="f-bmax" inputmode="numeric"></div>
+              <div class="field opt-field full" data-required-today><label for="f-heard">How did you hear about us? <span class="req" data-hide="form-fields">*</span><span class="opt" data-show="form-fields" hidden>(optional)</span></label>
+                <select id="f-heard"><option value="">Please select</option><option>Search engine</option><option>Rightmove or Zoopla</option><option>Social media</option><option>Friend or family</option><option>Walking past</option></select></div>
+
+              <fieldset class="field full consent" data-required><legend>Email marketing <span class="req">*</span></legend>
+                <div class="radios"><label><input type="radio" name="em"> Yes, I want to receive</label><label><input type="radio" name="em"> No, I don't want to receive</label></div></fieldset>
+              <fieldset class="field full consent" data-required><legend>SMS marketing <span class="req">*</span></legend>
+                <div class="radios"><label><input type="radio" name="sms"> Yes, I want to receive</label><label><input type="radio" name="sms"> No, I don't want to receive</label></div></fieldset>
+              <div class="full"><button type="submit" class="btn btn-solid">Submit enquiry</button></div>
+            </form>
+            <div class="form-done" data-form-done tabindex="-1" hidden>
+              <h3>Thanks, we've got your enquiry</h3>
+              <p>In the live page this is HubSpot's own confirmation message. Nothing has been sent from this mockup.</p>
+              <button type="button" class="btn btn-sm" data-form-reset>Try the form again</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ===== Apartments (T3, T4, T8) ===== -->
+    <div class="ec-sec" id="apartments">
+      <div class="note-slot" data-note="3 4 8"></div>
+      <section class="ec-apts" aria-labelledby="apts-h">
+        <div class="container">
+          <div class="intro" data-mark="3">
+            <h3 id="apts-h" class="display">Apartments to rent at Elephant Central</h3>
+            <p>Choose from 1-3 bedroom apartments, many with dual aspect to make the most of the city views. There's plenty of free bike storage and a limited number of underground car parking facilities available to rent.</p>
+          </div>
+          <p class="rating" data-show="proof" data-mark="8" hidden>Residents rate Get Living 4.42 out of 5 on HomeViews, from 1,357 verified reviews.</p>
+          <div class="apt-grid">
+            <article class="apt">
+              <div class="ph tone-room" role="img" aria-label="A one bedroom apartment bedroom" data-label="Photo · bedroom" data-img="https://www.getliving.com/wp-content/uploads/2025/06/elephant-central-yellow-bedroom-1100x1000-1-768x698.jpg"></div>
+              <div class="body">
+                <h3>1 bedroom</h3>
+                <p>One bedroom apartments ideal for independent living or for a couple. Modern décor and plenty of hidden storage.</p>
+                <p class="meta" data-show="card-prices" data-mark="4" hidden><span>From <strong>£2,550</strong> pcm</span><span class="avail">3 available</span></p>
+                <a class="btn push" href="https://www.getliving.com/find-a-home/?neighbourhood=elephant-central&amp;beds=1" data-hide="card-prices">Find a home</a>
+                <a class="btn btn-solid" href="https://www.getliving.com/find-a-home/?neighbourhood=elephant-central&amp;beds=1" data-show="card-prices" hidden>View 3 one-bed homes</a>
+              </div>
+            </article>
+            <article class="apt">
+              <div class="ph tone-room" role="img" aria-label="Open plan living room and kitchen" data-label="Photo · living and kitchen" data-img="https://www.getliving.com/wp-content/uploads/2025/06/elephant-central-sofa-kitchen-1100x1000-1-768x698.jpg"></div>
+              <div class="body">
+                <h3>2 bedrooms</h3>
+                <p>Two bedroom apartments with options available for one or two bathrooms. Lots of natural light and great views of the city.</p>
+                <p class="meta" data-show="card-prices" hidden><span>From <strong>£3,150</strong> pcm</span><span class="avail">5 available</span></p>
+                <a class="btn push" href="https://www.getliving.com/find-a-home/?neighbourhood=elephant-central&amp;beds=2" data-hide="card-prices">Find a home</a>
+                <a class="btn btn-solid" href="https://www.getliving.com/find-a-home/?neighbourhood=elephant-central&amp;beds=2" data-show="card-prices" hidden>View 5 two-bed homes</a>
+              </div>
+            </article>
+            <article class="apt">
+              <div class="ph tone-room" role="img" aria-label="Living room with a balcony and city view" data-label="Photo · living room and balcony" data-img="https://www.getliving.com/wp-content/uploads/2023/07/EC-Living-Room-Balcony-View-1100x1000-1-768x698.jpg"></div>
+              <div class="body">
+                <h3>3 bedrooms</h3>
+                <p>Spacious three bedroom apartments with open plan dining and living area. Perfect for sharers or those looking for additional space</p>
+                <p class="meta" data-show="card-prices" hidden><span>Prices on request</span><span class="none">None available right now</span></p>
+                <a class="btn push" href="https://www.getliving.com/find-a-home/?neighbourhood=elephant-central&amp;beds=3" data-hide="card-prices">Find a home</a>
+                <a class="btn" href="#enquire" data-beds="3" data-show="card-prices" hidden>Register interest in a three-bed</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ===== Commute calculator (moved by T9) ===== -->
+    <div class="ec-sec" id="commute">
+      <section class="ec-commute" aria-labelledby="commute-h">
+        <div class="container head">
+          <h3 id="commute-h">Your commute time</h3>
+          <p>Calculate your distance to work or leisure activities from your new apartment in Central London:</p>
+        </div>
+        <form class="commute-form" data-commute>
+          <div><label for="c-dest">Destination</label><input id="c-dest" type="text" placeholder="Postcode"></div>
+          <div><label for="c-mode">Travel type</label>
+            <select id="c-mode"><option value="">Select</option><option>Public transport</option><option>Cycling</option><option>Walking</option><option>Driving</option></select></div>
+          <button type="submit" aria-label="Search">&#9906;</button>
+        </form>
+        <div class="map" role="img" aria-label="Map placeholder centred on Elephant Central">
+          <span class="pin" aria-hidden="true"></span>
+          <p class="result" data-commute-result aria-live="polite" hidden></p>
+          <span class="label">Google map in the live page</span>
+        </div>
+      </section>
+    </div>
+
+    <!-- ===== Shop and eat (T12) ===== -->
+    <div class="ec-sec" id="shop">
+      <section class="ec-shop" aria-labelledby="shop-h">
+        <div class="container">
+          <div class="head">
+            <h3 id="shop-h" class="display">Shop &amp; eat at Elephant Central</h3>
+            <p>Live in a Central London location with a local feel. Workout, shop, eat and drink at a number of independent retailers below Elephant Central and at the new open-air shopping centre: Castle Square.</p>
+          </div>
+          <div data-car tabindex="0" aria-roledescription="carousel" aria-label="Shops and restaurants">
+            <div class="car shop-grid">
+              <div class="car-track">
+                <article class="car-card shop-card"><div class="ph tone-gold" data-label="Photo" data-img="https://www.getliving.com/wp-content/uploads/2024/09/CheeMc-Fried-Chicken-1920x1280-1-768x512.jpg"></div><div class="body"><h4>CheeMc Elephant &amp; Castle</h4><p class="kind">Korean Restaurant</p><p>Authentic Korean fried chicken and street food restaurant bringing the flavours of Korea to London.</p><span class="tag">RESTAURANTS</span></div></article>
+                <article class="car-card shop-card"><div class="ph" data-label="Photo" data-img="https://www.getliving.com/wp-content/uploads/2022/05/Gymbox-Intense-Class-1150x1000-1-768x668.png"></div><div class="body"><h4>Gymbox, Elephant and Castle</h4><p class="kind">Gym and Combat Training</p><p>Gymbox is home to the most unique and diverse classes in London.</p><span class="tag">SERVICES</span></div></article>
+                <article class="car-card shop-card"><div class="ph tone-gold" data-label="Photo" data-img="https://www.getliving.com/wp-content/uploads/2022/05/Murger-at-Murger-Han-1600x1000-1-768x480.jpg"></div><div class="body"><h4>Murger Han, Elephant and Castle</h4><p class="kind">Chinese Restaurant</p><p>London's first authentic Xi'an cuisine restaurant, open from breakfast to dinner.</p><span class="tag">RESTAURANTS</span></div></article>
+                <article class="car-card shop-card"><div class="ph" data-label="Photo" data-img="https://www.getliving.com/wp-content/uploads/2022/05/Pizza-Pappagone-Food-Full-Shot-1150x760-1-768x511.png"></div><div class="body"><h4>Pizza Pappagone Sud</h4><p class="kind">Italian Restaurant</p><p>A lively, family-friendly Italian restaurant and pizzeria, open since 1998.</p><span class="tag">RESTAURANTS</span></div></article>
+                <article class="car-card shop-card"><div class="ph tone-gold" data-label="Photo" data-img="https://www.getliving.com/wp-content/uploads/2023/08/Yohome-Supermarket-Windows-1200x830-1-768x561.jpg"></div><div class="body"><h4>Yohome Elephant &amp; Castle</h4><p class="kind">Asian Supermarket &amp; Bubble Tea Shop</p><p>Asian snacks, groceries and bubble tea, with light bites to eat in.</p><span class="tag">CAFÉS SHOPS</span></div></article>
+              </div>
+            </div>
+            <div class="car-ctrl">
+              <button type="button" data-prev aria-label="Previous">&#8592;</button>
+              <button type="button" data-next aria-label="Next">&#8594;</button>
+              <span class="prog" aria-hidden="true"><span></span></span>
+              <span class="count" aria-live="polite">1 / 5</span>
+            </div>
+          </div>
+          <p class="sec-cta" data-show="section-ctas" hidden><a class="link-arrow" href="https://www.getliving.com/find-a-home/?neighbourhood=elephant-central">See available homes at Elephant Central</a></p>
+        </div>
+      </section>
+    </div>
+
+    <!-- ===== Closing prompt (T12), reusing the enquiry block ===== -->
+    <div class="ec-sec" id="close" data-show="section-ctas" hidden>
+      <section class="ec-close" aria-labelledby="close-h">
+        <div class="container">
+          <h2 id="close-h" class="display">Like the look of Elephant Central?</h2>
+          <p>Homes available now in Mawes House, Raglan House and Tantallon House.</p>
+          <div class="btns">
+            <a class="btn btn-solid" href="https://www.getliving.com/find-a-home/?neighbourhood=elephant-central">See available homes</a>
+            <a class="btn" href="#enquire">Enquire now</a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ===== Building safety notice (unchanged) ===== -->
+    <div class="ec-sec" id="safety">
+      <div class="note-slot">
+        <aside class="cro-note query"><h4>Q: The building works notice</h4><p>We have not changed this, and it should stay on the page. The only proposal is that the page no longer ends on it (tweak 12). If there is anything Get Living can say about whether the works affect the homes being let, a line of that here would answer the question the notice raises for a prospective renter. That is for Get Living to decide.</p></aside>
+      </div>
+      <section class="ec-safety" aria-labelledby="safety-h">
+        <div class="container">
+          <h2 id="safety-h">Planned building safety works at Elephant Central</h2>
+          <button type="button" data-safety aria-expanded="false" aria-controls="safety-more">Read more</button>
+          <div class="more" id="safety-more" hidden>
+            <p>Summary as on the live page: phased scaffolding from September, starting on Ash Avenue; more extensive works at Portchester House, which is student accommodation and vacant for 2026/27; and an enhanced fire alarm system, subject to approval from the Building Safety Regulator. Questions go to the Get Living team.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="ec-sec" id="end">
+      <div class="note-slot" data-note="11"></div>
+      <div class="ec-end"><div class="container">Get Living's site footer follows here on the live page. It is left out of this mockup because none of the proposed changes touch it.</div></div>
+    </div>
+  </main>
+
+  <!-- Mobile bottom bar (T11) -->
+  <div class="ec-mbar" id="mobilebar">
+    <a class="ec-logo" href="#hero" data-hide="mobile-bar" aria-label="Elephant Central, top of page">Elephant<span>Central</span></a>
+    <a class="btn" href="#enquire" data-hide="mobile-bar">Enquire now</a>
+    <a class="btn btn-solid grow" href="https://www.getliving.com/find-a-home/?neighbourhood=elephant-central" data-show="mobile-bar" data-mark="11" hidden>View homes</a>
+    <a class="btn grow" href="#enquire" data-show="mobile-bar" hidden>Enquire</a>
+    <button type="button" class="chat-in" data-show="mobile-bar" data-chat aria-label="Chat" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg></button>
+  </div>
+  <button type="button" class="chat" data-chat aria-label="Chat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg></button>
+
+  <script src="../js/tweaks.js"></script>
+  <script src="../js/mockup.js"></script>
+</body>
+</html>
