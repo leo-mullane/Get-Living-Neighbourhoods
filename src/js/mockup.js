@@ -40,32 +40,36 @@
      Overview page: render the tweak list from tweaks.js
      --------------------------------------------------------------------- */
   function renderOverview() {
+    var rounds = document.querySelector('[data-round-list]');
+    if (rounds) {
+      var rhref = rounds.getAttribute('data-page');
+      Object.keys(ROUNDS).forEach(function (r) {
+        var items = TWEAKS.filter(function (t) { return String(t.round) === r; });
+        var row = document.createElement('div');
+        row.className = 'round-row';
+        row.innerHTML = '<div><h3>' + ROUNDS[r].title + '</h3><p>' + ROUNDS[r].summary +
+          ' Changes ' + items.map(function (t) { return t.id; }).join(', ').replace(/, (\d+)$/, ' and $1') + '.</p></div>' +
+          '<a class="btn btn-sm btn-light" href="' + rhref + '?t=' + items.map(function (t) { return t.key; }).join(',') + '">See round ' + r + ' on its own</a>';
+        rounds.appendChild(row);
+      });
+    }
     var host = document.querySelector('[data-tweak-list]');
     if (!host) return;
     var href = host.getAttribute('data-page');
-    Object.keys(ROUNDS).forEach(function (r) {
-      var sec = document.createElement('section');
-      sec.className = 'round';
-      sec.setAttribute('aria-labelledby', 'round-' + r);
-      var keys = TWEAKS.filter(function (t) { return String(t.round) === r; }).map(function (t) { return t.key; });
-      sec.innerHTML = '<div class="round-head"><h3 id="round-' + r + '">' + ROUNDS[r].title + '</h3>' +
-        '<a class="btn btn-sm" href="' + href + '?t=' + keys.join(',') + '">See this round on its own</a></div>' +
-        '<p class="round-sum">' + ROUNDS[r].summary + '</p>';
-      var list = document.createElement('ol');
-      list.className = 'tw-list';
-      TWEAKS.filter(function (t) { return String(t.round) === r; }).forEach(function (t) {
-        var e = EFFORT[t.effort] || {};
-        var li = document.createElement('li');
-        li.innerHTML = '<span class="n">' + t.id + '</span><div><h4>' + t.title + '</h4>' +
-          '<p>' + t.change + '</p>' +
-          '<p class="meta"><span class="chip chip-' + t.effort + '" title="' + (e.tip || '') + '">' + (e.label || '') + '</span>' +
-          '<span class="measure"><strong>Measure:</strong> ' + t.measure + '</span></p>' +
-          '<a class="link-arrow" href="' + href + '?t=' + t.key + '&notes=1#' + t.anchor + '">See this change on its own</a></div>';
-        list.appendChild(li);
-      });
-      sec.appendChild(list);
-      host.appendChild(sec);
+    var list = document.createElement('ol');
+    list.className = 'tw-list';
+    TWEAKS.forEach(function (t) {
+      var e = EFFORT[t.effort] || {};
+      var li = document.createElement('li');
+      li.innerHTML = '<span class="n">' + t.id + '</span><div><h4>' + t.title + '</h4>' +
+        '<p>' + t.change + '</p>' +
+        '<p class="meta"><span class="chip chip-' + t.effort + '" title="' + (e.tip || '') + '">' + (e.label || '') + '</span>' +
+        '<span class="round-tag">Test round ' + t.round + '</span>' +
+        '<span class="measure"><strong>Measure:</strong> ' + t.measure + '</span></p>' +
+        '<a class="link-arrow" href="' + href + '?t=' + t.key + '&notes=1#' + t.anchor + '">See this change on its own</a></div>';
+      list.appendChild(li);
     });
+    host.appendChild(list);
   }
 
   /* ---------------------------------------------------------------------
@@ -121,7 +125,7 @@
       if (el) el.style.order = i;
     });
 
-    /* The enquiry form starts open with tweak 6, behind a button without it */
+    /* The enquiry form starts open with change 8, behind a button without it */
     var acc = document.querySelector('[data-acc-btn]');
     var form = document.getElementById('enquiry-form');
     if (acc && form) {
@@ -166,19 +170,14 @@
     quick.innerHTML = '<button type="button" data-quick="all">All on</button><button type="button" data-quick="none">All off</button>' +
       Object.keys(ROUNDS).map(function (r) { return '<button type="button" data-quick="r' + r + '">Round ' + r + ' only</button>'; }).join('');
     body.appendChild(quick);
-    Object.keys(ROUNDS).forEach(function (r) {
-      var h = document.createElement('h3');
-      h.textContent = ROUNDS[r].title;
-      body.appendChild(h);
-      TWEAKS.filter(function (t) { return String(t.round) === r; }).forEach(function (t) {
-        var e = EFFORT[t.effort] || {};
-        var row = document.createElement('div');
-        row.className = 'tw-row';
-        row.innerHTML = '<input type="checkbox" id="tw-' + t.key + '" value="' + t.key + '" data-tw-check>' +
-          '<label for="tw-' + t.key + '"><span class="n">' + t.id + '</span>' + t.title +
-          '<small><span class="chip chip-' + t.effort + '">' + (e.label || '') + '</span></small></label>';
-        body.appendChild(row);
-      });
+    TWEAKS.forEach(function (t) {
+      var e = EFFORT[t.effort] || {};
+      var row = document.createElement('div');
+      row.className = 'tw-row';
+      row.innerHTML = '<input type="checkbox" id="tw-' + t.key + '" value="' + t.key + '" data-tw-check>' +
+        '<label for="tw-' + t.key + '"><span class="n">' + t.id + '</span>' + t.title +
+        '<small><span class="chip chip-' + t.effort + '">' + (e.label || '') + '</span> Test round ' + t.round + '</small></label>';
+      body.appendChild(row);
     });
     body.addEventListener('change', function (ev) {
       if (!ev.target.matches('[data-tw-check]')) return;
@@ -351,7 +350,7 @@
       done.hidden = false;
       done.focus();
     });
-    /* Required markers follow tweak 7 */
+    /* Required markers follow change 9 */
     var reset = document.querySelector('[data-form-reset]');
     if (reset) reset.addEventListener('click', function () {
       f.reset();
@@ -414,7 +413,7 @@
     });
     if (!page) {
       document.querySelectorAll('[data-mockup-only]').forEach(function (el) { el.hidden = true; });
-      setNotes(store('ec-notes') === '1');
+      setNotes(store('ec-notes') !== '0');
       return;
     }
 
@@ -424,7 +423,7 @@
     initCarousels();
     initEnquiry();
     initMisc();
-    setNotes(store('ec-notes') === '1');
+    setNotes(store('ec-notes') !== '0');
     apply();
 
     document.querySelectorAll('[data-mode]').forEach(function (b) {
